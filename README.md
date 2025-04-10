@@ -374,7 +374,7 @@ async function validateUserKey() {
 ### Complete Example - Key Management Workflow
 
 ```javascript
-import { PelindaJS } from "./index.js";
+import { PelindaJS } from "pelindajs";
 
 async function licenseManagementDemo() {
   try {
