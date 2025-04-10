@@ -1,6 +1,6 @@
 {
   "name": "pelindajs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Node.js wrapper for the pandadevelopment key system",
   "main": "index.js",
   "scripts": {
