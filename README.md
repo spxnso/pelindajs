@@ -322,7 +322,7 @@ Searches for and retrieves information about a specific generated key.
 async function findGeneratedKey() {
   const pelinda = await PelindaJS.new("your-api-key");
   const result = await pelinda.fetchGeneratedKey(
-    "land0f0cdbf266e29d3adfae9da32279ee0492ff520340580fb6da99057085b92c5a"
+    "your-key"
   );
 
   if (result.success) {
@@ -354,7 +354,7 @@ Validates a license key against the service with the hardware ID.
 async function validateUserKey() {
   const pelinda = await PelindaJS.new("your-api-key");
   const result = await pelinda.validateKey({
-    service: "landexecutor",
+    service: "your-service-here",
     keyValue:
       "user-key",
     hwid: "user-hwid",
