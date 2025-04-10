@@ -390,7 +390,7 @@ async function licenseManagementDemo() {
     });
 
     if (genResult.success) {
-      console.log(`Generated keys: ${genResult.generatedKeys}`);
+      console.log(`Generated keys: ${genResult.generatedKeys[0], genResult.generatedKeys[1]}`);
 
       // Validate one of the generated keys
       const keyToValidate = genResult.generatedKeys[0];
@@ -408,7 +408,6 @@ async function licenseManagementDemo() {
           days: 30,
         });
 
-        console.log(extendResult);
         if (extendResult.success) {
           console.log(`Key expiration extended by 30 days`);
 
