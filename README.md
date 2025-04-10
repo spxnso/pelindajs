@@ -70,7 +70,7 @@ import { PelindaJS } from "pelindajs";
 async function init() {
   try {
     const pelinda = await PelindaJS.new(
-      "400c8ae7b62dcbe86ee435e9193411f18ded62a9e40b0f9b62bcbdb71d96327b"
+      "your-api-key"
     );
     console.log("PelindaJS initialized successfully");
   } catch (error) {
@@ -190,7 +190,7 @@ async function deleteUserKey() {
   const pelinda = await PelindaJS.new("your-api-key");
   const result = await pelinda.deleteKey({
     keyValue:
-      "land0f0cdbf266e29d3adfae9da32279ee0492ff520340580fb6da99057085b92c5a",
+      "user-key",
   });
 
   if (result.success) {
@@ -214,7 +214,7 @@ Checks if an identifier exists in the system and returns service information.
 ```javascript
 async function checkUserIdentifier() {
   const pelinda = await PelindaJS.new("your-api-key");
-  const result = await pelinda.checkIdentifier("user-identifier-123");
+  const result = await pelinda.checkIdentifier("identifier-123");
 
   if (result.success) {
     console.log(`Identifier status: ${result.message}`);
@@ -243,7 +243,7 @@ async function extendKeyValidity() {
   const pelinda = await PelindaJS.new("your-api-key");
   const result = await pelinda.expendKeyExpiration({
     keyValue:
-      "land0f0cdbf266e29d3adfae9da32279ee0492ff520340580fb6da99057085b92c5a",
+      "user-key",
     days: 60,
   });
 
@@ -270,7 +270,7 @@ Searches for and retrieves information about a specific key.
 async function lookupKey() {
   const pelinda = await PelindaJS.new("your-api-key");
   const result = await pelinda.fetchKey(
-    "land0f0cdbf266e29d3adfae9da32279ee0492ff520340580fb6da99057085b92c5a"
+    "user-key"
   );
 
   if (result.success) {
@@ -297,7 +297,7 @@ Deletes a keyless authentication entry by hardware ID.
 async function removeKeylessAuth() {
   const pelinda = await PelindaJS.new("your-api-key");
   const result = await pelinda.deleteKeyless({
-    hwid: "41f896eb-e7cd-4e65-9f2f-633ad7380cb1",
+    hwid: "hwid",
   });
 
   if (result.success) {
@@ -356,8 +356,8 @@ async function validateUserKey() {
   const result = await pelinda.validateKey({
     service: "landexecutor",
     keyValue:
-      "land0f0cdbf266e29d3adfae9da32279ee0492ff520340580fb6da99057085b92c5a",
-    hwid: "41f896eb-e7cd-4e65-9f2f-633ad7380cb1",
+      "user-key",
+    hwid: "user-hwid",
   });
 
   if (result.success) {
